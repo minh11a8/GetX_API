@@ -8,6 +8,7 @@ import 'package:getx_fetchapi/views/product_title.dart';
 class HomePage extends StatelessWidget {
   HomePage({super.key});
   final ProductController productController = Get.put(ProductController());
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -25,7 +26,12 @@ class HomePage extends StatelessWidget {
                     child: Text('ShopX'),
                   ),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.snackbar("GeeksforGeeks", "Hello everyone",
+                            icon: const Icon(Icons.person, color: Colors.white),
+                            snackPosition: SnackPosition.TOP,
+                            duration: const Duration(seconds: 1));
+                      },
                       icon: const Icon(Icons.view_list_rounded)),
                   IconButton(
                     onPressed: () {},
